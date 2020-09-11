@@ -70,4 +70,4 @@ function Checker(){
 }
 
 
-setInterval(Checker,100)
+setInterval(Checker,100);
