@@ -20,7 +20,7 @@ div.menu{
 }
 
 a.menu-item{
-    transition: 0.5s
+    transition: 0.5s;
     padding-top: 1.35vh;
     padding-bottom: 1.35vh;
     padding-left: 40px;
