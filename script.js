@@ -11,7 +11,7 @@ const newsContainer = document.getElementById("News-container");
 const contactContainer = document.getElementById("Contact-container");
 
 //base url
-const mainUrl = "http://127.0.0.1:5500/index.html";
+const mainUrl = "https://index-ish.github.io/main/";
 
 
 //looping fuction
