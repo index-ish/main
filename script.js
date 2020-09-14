@@ -1,3 +1,26 @@
+
+
+
+
+
+/*
+
+       _  _____ 
+      | |/ ____|
+      | | (___  
+  _   | |\___ \ 
+ | |__| |____) |
+  \____/|_____/ 
+
+  */
+
+
+
+
+
+
+
+
 //menu buttons
 const homeBtn = document.getElementById("Home");
 const aboutBtn = document.getElementById("About");
@@ -71,3 +94,5 @@ function Checker(){
 
 
 setInterval(Checker,100);
+
+
