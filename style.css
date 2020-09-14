@@ -22,6 +22,10 @@
     padding: 0;
 }
 
+body{
+    background-color: rgb(24, 23, 23);
+}
+
 
 div.menu{
     font-family: 'Syne', sans-serif;
@@ -82,6 +86,7 @@ div.container{
 #Home-container{
     display: block;
     
+    
 }
 
 #Home{
@@ -100,6 +105,8 @@ div.container{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 0px 0px 10px #ffffff;
+    
 }
 
 #About-container h1 {
@@ -114,7 +121,7 @@ div.container-body {
     font-weight: 525;
     font-size: 12pt;
     width: 50%;
-    
+    color: #ffffff;
     height: fit-content;
     left: 50%;
     position: absolute;
@@ -123,6 +130,8 @@ div.container-body {
     padding: 10%;
     border-radius: 1%;
     background-color: #353535;
+
+
 }
 
 
