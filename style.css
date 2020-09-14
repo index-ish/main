@@ -13,7 +13,8 @@
 
 
 
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@500&display=swap');
 
 *{
     box-sizing: border-box;
@@ -23,9 +24,10 @@
 
 
 div.menu{
+    font-family: 'Syne', sans-serif;
     width: 100%;
     height: 5v;
-    background-color: #3039bb;
+    background-color: #272727;
     position: absolute;
     top:0;
     left:0;
@@ -42,7 +44,7 @@ a.menu-item{
     padding-bottom: 1.35vh;
     padding-left: 40px;
     padding-right: 40px;
-    background-color: #3039bb;
+    background-color: #272727;
     color: #ffffff;
     bottom: 0;
     display: inline-block;
@@ -50,10 +52,10 @@ a.menu-item{
     text-decoration: none;
     
     
-}
+}m
 
 a.menu-item:hover{
-    background-color: #4e58e4;
+    background-color: #353535;
     transition: 0.7s ease;
 }
 
@@ -83,5 +85,45 @@ div.container{
 }
 
 #Home{
-    background-color: #4e58e4;
+    background-color: #353535;
 }
+
+#Home-container h1{
+    text-align: center;
+    font-size: 5vh;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#Home-container img{
+    width: 100%;
+  
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#About-container h1 {
+    text-align: center;
+    
+
+    font-family: 'Roboto Mono', monospace;
+}
+div.container-body {
+    
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 525;
+    font-size: 12pt;
+    width: 50%;
+    
+    height: fit-content;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,0);
+    margin-bottom: 1%;
+    padding: 10%;
+    border-radius: 1%;
+    background-color: #353535;
+}
+
+
+
