@@ -178,5 +178,33 @@ a#Email-to-CM{
     padding-left: 30px;
 }
 div#Carl-cntct {
+    height:11.7vh;
+    width: 20vw;
+    padding-right: 10px;
+    margin-top: 100px;
     text-align: right;
+    box-shadow: 0px 0px 10px #ffffff;
+    background-color: #272727;
+    top: 50%;
+    left: 50%;
+ 
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 5px;
+
+    
+}
+div#Itay-cntct {
+    box-shadow: 0px 0px 10px #ffffff;
+    padding-left: 10px;
+    border-radius: 5px;
+    background-color: #272727;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%);
+    height: 11.7vh;
+    width: 20vw;
+    text-align: left;
 }

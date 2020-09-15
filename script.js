@@ -40,7 +40,7 @@ const Easteregg = document.querySelector("a.double-click-here");
 const homeMainText = document.querySelector("p.Home-main-paragraph");
 
 //base url
-const mainUrl = "http://127.0.0.1:5500/index.html";
+const mainUrl = "http://127.0.0.1:5500/";
 
 
 //looping fuction
@@ -106,20 +106,50 @@ var ypos = 0;
 
 //checks for double click
 Easteregg.addEventListener("dblclick", ()=>{
-    var row1 = [" "," "," "," "," "," "," "," "," "," "];
-    var row2 = [" "," "," "," "," "," "," "," "," "," "];
-    var row3 = [" "," "," "," "," "," "," "," "," "," "];
-    var row4 = [" "," "," "," "," "," "," "," "," "," "];
-    var row5 = [" "," "," "," "," "," "," "," "," "," "];
-    var row6 = [" "," "," "," "," "," "," "," "," "," "];
-    var row7 = [" "," "," "," "," "," "," "," "," "," "];
-    var row8 = [" "," "," "," "," "," "," "," "," "," "];
-    var row9 = [" "," "," "," "," "," "," "," "," "," "];
-    var row10 = [" "," "," "," "," "," "," "," "," "," "];
+
+    var row1 = ["&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;"];
+    var row2 = ["&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;"];
+    var row3 = ["&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;",];
+    var row4 = ["&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;", "&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;"];
+    var row5 = ["&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;",];
+    var row6 = ["&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;",];
+    var row7 = ["&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;"];
+    var row8 = ["&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;"];
+    var row9 = ["&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;"];
+
+    var row10 = ["&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;"];
+
+    const row = [row1, row2, row3, row4, row5, row6, row7, row8,row9, row10]
+
+    window.addEventListener("keydown", (e)=>{
+
+        
+
+
+
+        if(e.keyCode == 87 || e.keyCode == 38){
+            ypos -= 1;
+            
+            
+        }
+
+        else if(e.keyCode == 83 || e.keyCode == 40){
+            ypos += 1;
+        }
+        
+        else if(e.keyCode == 68 || e.keyCode == 39){
+            xpos += 1;
+        }
+
+        else if(e.keyCode == 65 || e.keyCode == 37){
+            xpos -= 1;
+        }
+    })
     
     function UpdateFunDisplay(){
-        homeMainText.innerHTML = row1[0] + row1[1] + row1[2] + row1[3] + row1[4] + row1[5] + row1[6] + row1[7] + row1[8] + row1[9] + "<br>" + row2[0] + row2[1] + row2[2] + row2[3] + row2[4] + row2[5] + row2[6] + row2[7] + row2[8] + row2[9] + "<br>" + row3[0] + row3[1] + row3[2] + row3[3] + row3[4] + row3[5] + row3[6] + row3[7] + row3[8] + row3[9] + "<br>" + row4[0] + row4[1] + row4[2] + row4[3] + row4[4] + row4[5] + row4[6] + row4[7] + row4[8] + row4[9] + "<br>" + row5[0] + row5[1] + row5[2] + row5[3] + row5[4] + row5[5] + row5[6] + row5[7] + row5[8] + row5[9] + "<br>" + row6[0] + row6[1] + row6[2] + row6[3] + row6[4] + row6[5] + row6[6] + row6[7] + row6[8] + row6[9] + "<br>" + row7[0] + row7[1] + row7[2] + row7[3] + row7[4] + row7[5] + row7[6] + row7[7] + row7[8] + row7[9] + "<br>" + row8[0] + row8[1] + row8[2] + row8[3] + row8[4] + row8[5] + row8[6] + row8[7] + row8[8] + row8[9] + "<br>" + row9[0] + row9[1] + row9[2] + row9[3] + row9[4] + row9[5] + row9[6] + row9[7] + row9[8] + row9[9] + "<br>" + row10[0] + row10[1] + row10[2] + row10[3] + row10[4] + row10[5] + row10[6] + row10[7] + row10[8] + row10[9] + "<br>";
+        homeMainText.innerHTML = row1.join("") + "<br>" + row2.join("") + "<br>" + row3.join("") + "<br>" + row4.join("") + "<br>" + row5.join("") + "<br>" + row6.join("") + "<br>" + row7.join("") + "<br>" + row8.join("") + "<br>" + row9.join("") + "<br>" + row10.join("") + "<br>";
         
+        row[ypos][xpos] = "X";
         
     }
 
