@@ -151,5 +151,7 @@ div.container-body {
 
 }
 
-
+a.double-click-here{
+    cursor: default;
+}
 
