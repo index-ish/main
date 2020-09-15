@@ -30,7 +30,7 @@ body{
 div.menu{
     font-family: 'Syne', sans-serif;
     width: 100%;
-    height: 5v;
+    height: 5vh;
     background-color: #272727;
     position: -webkit-sticky;
     position: sticky;
