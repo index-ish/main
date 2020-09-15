@@ -40,7 +40,7 @@ const Easteregg = document.querySelector("a.double-click-here");
 const homeMainText = document.querySelector("p.Home-main-paragraph");
 
 //base url
-const mainUrl = "http://127.0.0.1:5500/";
+const mainUrl = "https://index-ish.github.io/main/index.html";
 
 
 //looping fuction
