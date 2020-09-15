@@ -155,3 +155,28 @@ a.double-click-here{
     cursor: default;
 }
 
+a#Email-to-IG {
+    border-color: black;
+    padding: 20px;
+    border: solid black;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    border-radius: 5px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+a#Email-to-CM{
+    border-color: black;
+    padding: 20px;
+    border: solid black;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    border-radius: 5px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+div#Carl-cntct {
+    text-align: right;
+}
