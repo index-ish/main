@@ -40,13 +40,13 @@ const Easteregg = document.querySelector("a.double-click-here");
 const homeMainText = document.querySelector("p.Home-main-paragraph");
 
 //base url
-const mainUrl = "https://index-ish.github.io/main/" || "https://index-ish.github.io/main/index.html" ;
+
 
 
 //looping fuction
 function Checker(){
     //checks which menu button was pressed
-    if(window.location.href == mainUrl + "#Home"){
+    if(window.location.href.includes("#Home")){
         //changes the color of the selected button and resets the color of the other btns to the original color
         homeBtn.style.backgroundColor = "#353535";
         aboutBtn.style.backgroundColor = "#272727";
@@ -60,7 +60,7 @@ function Checker(){
 
     }
     
-    else if(window.location.href == mainUrl + "#About"){
+    else if(window.location.href.includes("#About")){
         homeBtn.style.backgroundColor = "#272727";
         aboutBtn.style.backgroundColor = "#353535";
         newsBtn.style.backgroundColor = "#272727";
@@ -72,7 +72,7 @@ function Checker(){
         contactContainer.style.display = "none";
     }
     
-    else if(window.location.href == mainUrl + "#News"){
+    else if(window.location.href.includes("#News")){
         homeBtn.style.backgroundColor = "#272727";
         aboutBtn.style.backgroundColor = "#272727";
         newsBtn.style.backgroundColor = "#353535";
@@ -84,7 +84,7 @@ function Checker(){
         contactContainer.style.display = "none";
     }
     
-    else if(window.location.href == mainUrl + "#Contact"){
+    else if(window.location.href.includes("#Contact")){
         homeBtn.style.backgroundColor = "#272727";
         aboutBtn.style.backgroundColor = "#272727";
         newsBtn.style.backgroundColor = "#272727";
@@ -103,14 +103,15 @@ setInterval(Checker,100);
 
 var xpos = 0;
 var ypos = 0;
+var lastkey = 0;
 
 //checks for double click
 Easteregg.addEventListener("dblclick", ()=>{
 
-    var row1 = ["&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;"];
-    var row2 = ["&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;"];
-    var row3 = ["&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;",];
-    var row4 = ["&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;", "&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;"];
+    var row1 = ["#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;"];
+    var row2 = ["&nbsp;","&nbsp;","#","&nbsp;","#;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;"];
+    var row3 = ["&nbsp;","&nbsp;","#","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;",];
+    var row4 = ["&nbsp;","&nbsp;","#","#","#","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;", "&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;"];
     var row5 = ["&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;",];
     var row6 = ["&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;",];
     var row7 = ["&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;","&nbsp;"];
@@ -128,22 +129,31 @@ Easteregg.addEventListener("dblclick", ()=>{
 
 
         if(e.keyCode == 87 || e.keyCode == 38){
-            ypos -= 1;
-            
+            if(row[ypos -1][xpos] != "#"){
+                ypos -= 1;
+                lastkey = 1;
+        }
             
         }
 
         else if(e.keyCode == 83 || e.keyCode == 40){
+            console.log(row[ypos][xpos]);
+        if(row[ypos +1][xpos] != "#"){
             ypos += 1;
-        }
+            lastkey = 2;
+        }}
         
         else if(e.keyCode == 68 || e.keyCode == 39){
+        if(row[ypos][xpos +1] != "#"){
             xpos += 1;
-        }
+            lastkey = 3;
+        }}
 
         else if(e.keyCode == 65 || e.keyCode == 37){
-            xpos -= 1;
-        }
+            if(row[ypos][xpos -1] != "#"){
+                xpos -= 1;
+                lastkey = 4;
+        }}
     })
     
     function UpdateFunDisplay(){
@@ -153,7 +163,26 @@ Easteregg.addEventListener("dblclick", ()=>{
         
     }
 
-    setInterval(UpdateFunDisplay,100);
+    function GameUpdate(){
+        if(lastkey == 1){
+            row[ypos + 1][xpos] = "&nbsp";
+        }
+        else if(lastkey == 2){
+            row[ypos - 1][xpos] = "&nbsp";
+        }
+        else if(lastkey == 3){
+            row[ypos][xpos - 1] = "&nbsp";
+
+        }
+
+        else if(lastkey == 4){
+            row[ypos][xpos + 1] = "&nbsp";
+            
+        }
+    }
+
+    setInterval(GameUpdate, 100)
+    setInterval(UpdateFunDisplay,1);
 
 })
 
